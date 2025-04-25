@@ -147,5 +147,3 @@ public final class SQL {
         getConnection().setAutoCommit(true);
     }
 }
-
-}

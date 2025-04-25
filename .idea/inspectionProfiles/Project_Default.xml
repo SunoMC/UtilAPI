@@ -6,16 +6,19 @@
       <option name="ignoredModules">
         <list>
           <option value="SunoAPI" />
+          <option value="UtilAPI" />
         </list>
       </option>
       <option name="ignoredPackages">
         <list>
+          <option value="org.jetbrains.kotlin:kotlin-stdlib:1.4.0" />
           <option value="org.jetbrains.kotlin:kotlin-stdlib:1.4.0" />
         </list>
       </option>
       <option name="ignoredReasons">
         <list>
           <option value="Not exploitable" />
+          <option value="Other" />
         </list>
       </option>
     </inspection_tool>

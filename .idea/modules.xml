@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SunoAPI.iml" filepath="$PROJECT_DIR$/SunoAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UtilAPI.iml" filepath="$PROJECT_DIR$/UtilAPI.iml" />
     </modules>
   </component>
 </project>

@@ -28,16 +28,14 @@ public final class Logger {
         logger = Bukkit.getConsoleSender();
         startTimeStamp = LocalDateTime.now();
         log = new ArrayList<>();
-
-        deleteLogFiles();
     }
 
     /**
      * Deletes existing log files (latest.log and timestamp-based log file) at startup.
      */
     private static void deleteLogFiles() {
-        File latestLog = new File("solar/logs/latest.log");
-        File startTimeLog = new File("solar/logs/" + startTimeStamp.format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss")) + ".log");
+        File latestLog = new File("suno/logs/latest.log");
+        File startTimeLog = new File("suno/logs/" + startTimeStamp.format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss")) + ".log");
 
         try {
             if (latestLog.exists()) {
@@ -47,7 +45,7 @@ public final class Logger {
                 startTimeLog.delete();
             }
         } catch (Exception e) {
-            sendMessage(e.getMessage());
+            Logger.warn(e.getMessage());
         }
     }
 
@@ -76,12 +74,12 @@ public final class Logger {
      */
     private static void writeToLogFiles(String message) {
         try {
-            FileWriter latestLogWriter = new FileWriter("solar/logs/latest.log", false);
+            FileWriter latestLogWriter = new FileWriter("suno/logs/latest.log", false);
             PrintWriter latestLogPrinter = new PrintWriter(latestLogWriter);
             latestLogPrinter.println(message);
             latestLogPrinter.close();
 
-            FileWriter startLogWriter = new FileWriter("solar/logs/" + startTimeStamp.format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss")) + ".log", false);
+            FileWriter startLogWriter = new FileWriter("suno/logs/" + startTimeStamp.format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss")) + ".log", false);
             PrintWriter startLogPrinter = new PrintWriter(startLogWriter);
             startLogPrinter.println(message);
             startLogPrinter.close();

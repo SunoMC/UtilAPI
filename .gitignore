@@ -10,6 +10,3 @@
 # target folder (Maven build folder)
 /target*
 **/target/**
-
-# make idea settings static
-/.idea*
